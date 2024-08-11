@@ -1,23 +1,15 @@
 import { useState } from 'react'
 import './App.css'
-import { useEffect } from 'react'
-import Button from './Button'
-import { ThemeContext } from './context'
-import FibonacciCalculator from './Calculator'
+import Button from './components/Button'
 
 function App() {
-    const themeDefaultValue = {
-      theme: 'light',
-      name: 'Lucas'
-    }
+  const [state, setState] = useState(1)
 
   return (
     <>
-      <ThemeContext.Provider value={themeDefaultValue}>
-        <div>
-          <FibonacciCalculator/>
-        </div>
-      </ThemeContext.Provider>
+      <div>
+        <Button state={state} setState={setState} color={'red'} name={'LUCAS'} value={'texto'}/>
+      </div>
     </>
   )
 }

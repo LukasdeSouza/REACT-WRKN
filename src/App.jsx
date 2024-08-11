@@ -5,6 +5,8 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [name, setName] = useState('Lucas')
+  console.log('Hola Mundo', count)
 
   return (
     <>
@@ -21,6 +23,8 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button onClick={() => setName('LUCAS')}>MUDAR NOME</button>
+        <p style={{color:'red'}}>MEU NOME É: {name}</p>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

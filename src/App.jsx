@@ -3,6 +3,7 @@ import './App.css'
 import { useEffect } from 'react'
 import Button from './Button'
 import { ThemeContext } from './context'
+import FibonacciCalculator from './Calculator'
 
 function App() {
     const themeDefaultValue = {
@@ -14,8 +15,7 @@ function App() {
     <>
       <ThemeContext.Provider value={themeDefaultValue}>
         <div>
-          <h2>SEJA BEM VINDO AO REACT</h2>
-          <Button />
+          <FibonacciCalculator/>
         </div>
       </ThemeContext.Provider>
     </>

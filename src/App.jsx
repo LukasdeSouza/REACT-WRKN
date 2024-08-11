@@ -2,21 +2,22 @@ import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react'
 import Button from './Button'
+import { ThemeContext } from './context'
 
 function App() {
-  const [reaction, setReaction] = useState('❤️')
-
-  useEffect(() => {
-    console.log('Componente montado')
-  }, [reaction])
-
+    const themeDefaultValue = {
+      theme: 'light',
+      name: 'Lucas'
+    }
 
   return (
     <>
-      <div>
-       <h2>SEJA BEM VINDO AO REACT</h2>
-       <Button/>
-      </div>
+      <ThemeContext.Provider value={themeDefaultValue}>
+        <div>
+          <h2>SEJA BEM VINDO AO REACT</h2>
+          <Button />
+        </div>
+      </ThemeContext.Provider>
     </>
   )
 }

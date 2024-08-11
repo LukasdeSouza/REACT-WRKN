@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react'
+import Button from './Button'
 
 function App() {
   const [reaction, setReaction] = useState('❤️')
@@ -14,10 +15,7 @@ function App() {
     <>
       <div>
        <h2>SEJA BEM VINDO AO REACT</h2>
-       <button onClick={() => setReaction('👍')}>
-        REAGIR
-       </button>
-       <p>sua reação: {reaction}</p>
+       <Button/>
       </div>
     </>
   )
